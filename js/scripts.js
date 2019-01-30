@@ -86,7 +86,7 @@ $.ajax({
             $('.card').html($('<div>', {class: "card-img-container"}));
             $('.card-img-container').html($('<img>', {class: "card-img", src: `${data.results[i].picture.medium}`, alt: "profile picture"}));
             $('.card').append($('<div>', {class: "card-info-container"}));
-            $('.card-info-container').html($('<h3>', {id: "name", class: "card-name cap"}).html(`${data.results[i].name.first}`))
+            $('.card-info-container').html($('<h3>', {id: "name", class: "card-name cap"}).html(`${data.results[i].name.first} ${data.results[i].name.last}`))
                 .append($('<p>', {class: "card-text"}).html(`${data.results[i].email}`))
                 .append($('<p>', {class: "card-text cap"}).html(`${data.results[i].location.city}, ${data.results[i].location.state}`));
 
